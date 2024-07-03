@@ -62,7 +62,7 @@ export default function QuizScreen() {
       username,
       score: `${correctQuestion}`
     }
-    const newLeaderboard = [...leaderboard, newLeaderboardEntry].sort((a, b) => { return a.score > b.score })
+    const newLeaderboard = [...leaderboard, newLeaderboardEntry]
     setLeaderboard(newLeaderboard)
     router.navigate('/leaderboard')
   }
@@ -84,7 +84,7 @@ export default function QuizScreen() {
         />
         <Button
           mode='contained'
-          buttonColor='#2E4A70'
+          buttonColor='#6750A4'
           onPress={() => handleSubmit()}
         >
           Submit

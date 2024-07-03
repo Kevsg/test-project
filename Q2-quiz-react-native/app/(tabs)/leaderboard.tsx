@@ -11,12 +11,17 @@ export default function LeaderboardScreen() {
 
     const { leaderboard, setLeaderboard } = useContext(LeaderboardContext)
 
+    let sortedLeaderboard = [...leaderboard]
+    sortedLeaderboard.sort((a, b) => b.score - a.score);
+
+    console.log(sortedLeaderboard)
+
     return (<View style={styles.container}>
         <Image source={require('@/assets/images/podium.png')} style={styles.leaderboardIcon} />
         <Text style={styles.leaderboardTitle} variant="displayMedium">Leaderboard</Text>
         <ScrollView showsVerticalScrollIndicator={false}>
-            {leaderboard.length === 0 && <Text variant="headlineLarge" style={styles.leaderboardSubtitle}>No Data yet!</Text>}
-            {leaderboard.map((data, index) => {
+            {sortedLeaderboard.length === 0 && <Text variant="headlineLarge" style={styles.leaderboardSubtitle}>No Data yet!</Text>}
+            {sortedLeaderboard.map((data, index) => {
                 return <Card key={`leaderboard-${index}`} mode='elevated' elevation={5} style={styles.leaderboardCard} theme={{ colors: { primary: 'green' } }}>
                     <Card.Title title={data.username} subtitle={`Score: ${data.score}/20`} left={LeftContent} />
                 </Card>

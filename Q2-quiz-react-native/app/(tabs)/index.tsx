@@ -13,7 +13,7 @@ export default function HomeScreen() {
       <Link asChild href='/quiz'>
         <Button
           mode='contained'
-          buttonColor='#2E4A70'
+          buttonColor='#6750A4'
           style={styles.startQuizBtn}
         >
           Start the quiz !
@@ -22,7 +22,7 @@ export default function HomeScreen() {
       <Link asChild href='/leaderboard'>
         <Button
           mode='contained'
-          buttonColor='#24B0BA'
+          buttonColor='#2E4A70'
           style={styles.leaderboardBtn}
         >
           Leaderboard
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     width: 160
   },
   leaderboardBtn: {
-    width: 160
+    width: 160,
   },
   quizQuestion: {
     fontWeight: 'bold',
