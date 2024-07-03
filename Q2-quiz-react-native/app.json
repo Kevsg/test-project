@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Q2-kahoot-clone",
-    "slug": "Q2-kahoot-clone",
+    "name": "Q2-quiz-react-native",
+    "slug": "Q2-quiz-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
